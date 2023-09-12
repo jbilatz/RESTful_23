@@ -1,25 +1,11 @@
 
 
 const http = require('http');
+const app = require('./app');
 
-const server = http.createServer((req, res) => {
-    const respuesta = {
-        message: 'ok',
-        meetings: [
-            {
-                title: 'Reunion 01',
-                descripcion: 'Presentacion / Tema 01'
-            },
-            {
-                title: 'Reunion 02',
-                descripcion: 'Tema 02'
-            }
-        ]
-    }
+app.set('port', 3000);
+const server = http.createServer(app);
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(respuesta));
-});
 
 server.listen(3000);
 
