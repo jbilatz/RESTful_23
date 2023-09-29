@@ -1,5 +1,5 @@
 /*
-datos que tomamos del proceso de confirguraciÃ³n de la base de datos online MongoDB Altas
+datos que tomamos del proceso de confirguracion de la base de datos online MongoDB Altas
 */
 // mongodb+srv://dBuser1:<password>@cluster0.schfn.mongodb.net/?retryWrites=true&w=majority
 
@@ -28,22 +28,12 @@ mongoose.connect('mongodb+srv://dBuser1:dBuser1@cluster0.schfn.mongodb.net/?retr
 app.use(express.json()) // para parsear como JSON el cuerpo de nuestra solicitud, y la respuesta
 
 const calenRoutes = require('./rutas/calendario');
+const usuariosRoutes = require('./rutas/usuario');
+
 
 app.use('/api/v1/meetings', calenRoutes);
+app.use('/api/v1/auth', usuariosRoutes);
 
-// app.post('/api/v1/meetings', );
-
-// app.put('/api/v1/meetings);
-
-
-// app.delete('/api/v1/meetings);
-
-  
-// app.get('/api/v1/meetings);
-
-
-
-// app.get('/api/v1/meetings', );
 
 
 module.exports = app; // exportamos nuestra app para poder tomarla en el server

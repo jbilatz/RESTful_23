@@ -3,7 +3,7 @@
 const mongoose = require('mongoose'); // carga el módulo Mangoose
 
 /*
-el equema que vamos a usar para darle formato a nustros datos en mongodb
+el esquema que vamos a usar para darle formato a nustros datos en mongodb
 */
 const meetingSchema = mongoose.Schema({
     title: { type: String, required: true },
