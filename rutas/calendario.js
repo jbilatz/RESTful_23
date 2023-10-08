@@ -7,6 +7,11 @@ const reunionCtrl = require('../controladores/reunion');
 
 const auth = require('../middleware/auth');
 
+/*
+para aseguraremos de que un usuario esté autenticado antes de permitir que sus solicitudes/requests pasen
+editamos las rutas de las reunuones declaradas al router,
+intercalando nuestro middleware auth como parámetro ENTRE el String de la ruta propiamente dicha, y la función de nuestros controles
+*/
 
 /*
 middleware para pedir los datos de una determinada reunión

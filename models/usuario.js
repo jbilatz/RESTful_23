@@ -16,6 +16,10 @@ const usuarioSchema = mongoose.Schema({
 
 usuarioSchema.plugin(uniqueValidator);
 
+/*
+El valor unique en el esquema, junto con mongoose-unique-validator pasado como plug-in,
+nos va a garantizar que no haya dos usuarios que puedan compartir nombre, o sea, su email
+*/
 
 module.exports = mongoose.model('Usuario', usuarioSchema);
 
